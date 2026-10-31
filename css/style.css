@@ -1,0 +1,210 @@
+
+/* =========================
+   GRUNDEINSTELLUNGEN
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #071426;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7, 20, 38, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #4d9fff;
+    margin-left: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #c5d0df;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4d9fff;
+}
+
+/* =========================
+   HERO-BEREICH
+========================= */
+
+.hero {
+    min-height: 620px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 130px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.eyebrow {
+    color: #4d9fff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #4d9fff;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #b7c4d5;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+    padding: 14px 26px;
+    background: #2463a5;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background: #347fc9;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   PROJEKT-BEREICH
+========================= */
+
+.project-section,
+.companies-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.project-section h2,
+.companies-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.project-section > p:last-child {
+    max-width: 750px;
+    color: #b7c4d5;
+    font-size: 17px;
+}
+
+/* =========================
+   UNTERNEHMENSBEREICH
+========================= */
+
+.companies-section {
+    background: #0c1d33;
+    max-width: none;
+    padding-left: max(30px, calc((100% - 1140px) / 2));
+    padding-right: max(30px, calc((100% - 1140px) / 2));
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 35px 20px;
+    color: #8798ad;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .project-section h2,
+    .companies-section h2 {
+        font-size: 28px;
+    }
+}
