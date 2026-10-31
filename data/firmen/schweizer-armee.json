@@ -1,0 +1,83 @@
+
+{
+  "id": "schweizer-armee",
+  "name": "Schweizer Armee – Kommando Cyber",
+  "logo": "",
+  "website": "https://www.armee.ch/",
+  "jobUrl": "https://jobs.admin.ch/offene-stellen/lernende-r-informatiker-in-fachrichtung-plattformentwicklung/141ccb00-e8e4-4900-a8bb-344b395d37e2",
+  "location": "Bern",
+  "languages": {
+    "de": {
+      "title": "Schweizer Armee – Kommando Cyber",
+      "subtitle": "Informatiker/-in EFZ, Fachrichtung Plattformentwicklung",
+      "chapters": [
+        {
+          "title": "Unternehmen",
+          "content": "Das Kommando Cyber ist der Bereich der Schweizer Armee, der sich mit Cyber und Digitalisierung beschäftigt. Es erbringt sichere und zuverlässige Informatikleistungen für die Schweizer Armee und ihre Partner im Sicherheitsverbund Schweiz."
+        },
+        {
+          "title": "Interessante Fakten",
+          "content": [
+            "Die Schweizer Armee beschäftigt über 9'000 Mitarbeitende.",
+            "Sie ist an 110 Standorten schweizweit vertreten.",
+            "Sie bildet Lernende in über 30 Berufen aus.",
+            "Das Kommando Cyber arbeitet mit modernen Technologien und agilen Arbeitsweisen."
+          ]
+        },
+        {
+          "title": "Die Lehrstelle",
+          "content": "Die Ausbildung dauert vom 1. August 2027 bis zum 31. Juli 2030. Im externen Basislehrjahr werden zuerst die IT-Grundlagen erlernt. Anschliessend folgt die praktische Ausbildung beim Kommando Cyber. Zu den Aufgaben gehören das Einrichten und Betreiben von IT-Systemen, die Betreuung von Netzwerken und Servern sowie die Analyse technischer Probleme."
+        },
+        {
+          "title": "Was macht diese Lehrstelle einzigartig?",
+          "content": "Die Lernenden erhalten zuerst eine externe Grundausbildung und können danach ihr Wissen direkt in der Praxis anwenden. Sie arbeiten an spannenden IT-Projekten mit und erhalten Raum, Verantwortung zu übernehmen. Während der Lehre gibt es sieben Wochen Ferien pro Jahr."
+        },
+        {
+          "title": "Arbeitsumfeld",
+          "content": "Das Kommando Cyber beschreibt sein Arbeitsumfeld als technologieorientiert und dynamisch. Moderne Technologien, Innovation und agile Arbeitsweisen spielen eine wichtige Rolle. Praxisbildende begleiten die Lernenden Schritt für Schritt bis zum erfolgreichen Lehrabschluss."
+        }
+      ]
+    },
+    "en": {
+      "title": "Swiss Armed Forces – Cyber Command",
+      "subtitle": "ICT Specialist EFZ, Platform Development",
+      "chapters": [
+        {
+          "title": "Company",
+          "content": "The Cyber Command is the part of the Swiss Armed Forces responsible for cyber and digitalisation. It provides secure and reliable IT services to the Swiss Armed Forces and its partners in the Swiss security network."
+        },
+        {
+          "title": "Interesting Facts",
+          "content": [
+            "The Swiss Armed Forces employ more than 9,000 people.",
+            "They are represented at 110 locations across Switzerland.",
+            "They train apprentices in more than 30 professions.",
+            "The Cyber Command works with modern technologies and agile methods."
+          ]
+        },
+        {
+          "title": "The Apprenticeship",
+          "content": "The apprenticeship runs from 1 August 2027 to 31 July 2030. Apprentices first learn the IT fundamentals during an external basic training year. They then gain practical experience at the Cyber Command. Tasks include setting up and operating IT systems, maintaining networks and servers, and analysing technical problems."
+        },
+        {
+          "title": "What Makes This Apprenticeship Unique?",
+          "content": "Apprentices first receive external basic training and can then apply their knowledge in practice. They participate in interesting IT projects and have opportunities to take on responsibility. The apprenticeship includes seven weeks of holiday per year."
+        },
+        {
+          "title": "Working Environment",
+          "content": "The Cyber Command describes its working environment as technology-oriented and dynamic. Modern technologies, innovation and agile methods play an important role. Training supervisors support apprentices step by step until they successfully complete their apprenticeship."
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Stellenausschreibung – Schweizer Armee, Kommando Cyber",
+      "url": "https://jobs.admin.ch/offene-stellen/lernende-r-informatiker-in-fachrichtung-plattformentwicklung/141ccb00-e8e4-4900-a8bb-344b395d37e2"
+    },
+    {
+      "title": "Schweizer Armee – Lehrberufe",
+      "url": "https://www.armee.ch/lehre"
+    }
+  ]
+}

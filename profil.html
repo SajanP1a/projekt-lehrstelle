@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unternehmensprofil und Informationen zur Lehrstelle.">
+    <title>Unternehmensprofil | Projekt Lehrstelle</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/profil.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                PROJEKT<span>LEHRSTELLE</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Startseite</a>
+                <a href="#profil">Profil</a>
+                <a href="#quellen">Quellen</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+
+        <div class="profile-top">
+            <a href="index.html" class="back-link">
+                ← Zurück zur Übersicht
+            </a>
+
+            <div class="language-switch">
+                <button id="lang-de" class="active">DE</button>
+                <button id="lang-en">EN</button>
+            </div>
+        </div>
+
+        <section id="profil">
+
+            <div class="profile-heading">
+                <p id="company-location" class="eyebrow"></p>
+                <h1 id="company-name">Unternehmensprofil</h1>
+                <p id="company-subtitle" class="profile-subtitle"></p>
+            </div>
+
+            <div id="chapter-list" class="chapter-list">
+                <p>Unternehmensprofil wird geladen ...</p>
+            </div>
+
+        </section>
+
+        <section class="sources-section" id="quellen">
+            <h2>Quellen</h2>
+            <ul id="source-list"></ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Projekt Lehrstelle · 2026</p>
+        <p>Ein persönliches Projekt zur Berufsorientierung und Webentwicklung.</p>
+    </footer>
+
+</body>
+</html>
