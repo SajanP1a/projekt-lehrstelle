@@ -1,52 +1,67 @@
 
-// Unternehmensprofile laden
 async function loadCompanies() {
     const companyList = document.getElementById("company-list");
 
     try {
-        // JSON-Datei abrufen
-        const response = await fetch("data/firmen/schweizer-armee.json");
+        // Liste aller Unternehmen laden
+        const indexResponse = await fetch("data/firmen/index.json");
 
-        if (!response.ok) {
-            throw new Error("Die Unternehmensdaten konnten nicht geladen werden.");
+        if (!indexResponse.ok) {
+            throw new Error("Unternehmensliste konnte nicht geladen werden.");
         }
 
-        const company = await response.json();
+        const companyIds = await indexResponse.json();
 
-        // Unternehmenskarte erstellen
-        const card = document.createElement("article");
-        card.classList.add("company-card");
+        // Alle Unternehmensdateien laden
+        const companies = await Promise.all(
+            companyIds.map(async (id) => {
+                const response = await fetch(`data/firmen/${id}.json`);
 
-        const title = document.createElement("h3");
-        title.textContent = company.languages.de.title;
+                if (!response.ok) {
+                    throw new Error(`Unternehmen ${id} konnte nicht geladen werden.`);
+                }
 
-        const description = document.createElement("p");
-        description.textContent =
-            company.languages.de.chapters[0].content;
+                return await response.json();
+            })
+        );
 
-        const location = document.createElement("span");
-        location.textContent = company.location;
+        // Karten erstellen
+        companyList.replaceChildren();
 
-        const link = document.createElement("a");
-        link.textContent = "Profil ansehen →";
-        link.href = `profil.html?id=${encodeURIComponent(company.id)}&lang=de`;
-        link.classList.add("company-link");
+        companies.forEach(company => {
+            const card = document.createElement("article");
+            card.classList.add("company-card");
 
-        // Elemente zusammensetzen
-        card.appendChild(location);
-        card.appendChild(title);
-        card.appendChild(description);
-        card.appendChild(link);
+            const location = document.createElement("span");
+            location.textContent = company.location;
 
-        companyList.appendChild(card);
+            const title = document.createElement("h3");
+            title.textContent = company.languages.de.title;
+
+            const description = document.createElement("p");
+            description.textContent =
+                company.languages.de.chapters[0].content;
+
+            const link = document.createElement("a");
+            link.textContent = "Profil ansehen →";
+            link.href = `profil.html?id=${encodeURIComponent(company.id)}&lang=de`;
+            link.classList.add("company-link");
+
+            card.append(location, title, description, link);
+            companyList.appendChild(card);
+        });
+
+        if (companies.length === 0) {
+            companyList.textContent = "Noch keine Unternehmensprofile vorhanden.";
+        }
 
     } catch (error) {
-        console.error("Fehler:", error);
+        console.error("Fehler beim Laden:", error);
 
         companyList.textContent =
-            "Die Unternehmensprofile konnten momentan nicht geladen werden.";
+            "Die Unternehmensprofile konnten nicht geladen werden.";
     }
 }
 
-// Funktion beim Laden der Seite starten
 loadCompanies();
+
