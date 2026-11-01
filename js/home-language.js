@@ -14,7 +14,23 @@ const translations = {
         companiesEyebrow: "ENTDECKEN",
         companiesTitle: "Unternehmensprofile",
         footerTitle: "Projekt Lehrstelle · 2026",
-        footerText: "Ein persönliches Projekt zur Berufsorientierung und Webentwicklung."
+        footerText: "Ein persönliches Projekt zur Berufsorientierung und Webentwicklung.",
+        docsEyebrow: "EINBLICKE",
+        docsTitle: "Dokumentation & Entwicklung",
+        docsText: "Hier dokumentiere ich meinen Entwicklungsprozess, meine Planung und den Einsatz von KI während des Projekts.",
+        docsJournal: "Entwicklungsjournal",
+        docsJournalText: "Meine Fortschritte, Erfahrungen und Erkenntnisse.",
+        docsAI: "KI-Prompts & KI-Einsatz",
+        docsAIText: "Beispiele meiner Prompts und wie ich KI als Werkzeug nutze.",
+        docsRequirements: "Pflichtenheft",
+        docsRequirementsText: "Ziele, Anforderungen und Funktionen des Projekts.",
+        docsPlanning: "Projektplanung",
+        docsPlanningText: "Planung und einzelne Entwicklungsphasen.",
+        docsDesign: "Designkonzept",
+        docsDesignText: "Gestaltung, Farben und Aufbau der Website.",
+        docsArchitecture: "Technische Architektur",
+        docsArchitectureText: "Dateistruktur und technischer Aufbau des Projekts.",
+        docsOpen: "Dokument öffnen →"
     },
 
     en: {
@@ -31,7 +47,23 @@ const translations = {
         companiesEyebrow: "EXPLORE",
         companiesTitle: "Company Profiles",
         footerTitle: "Apprenticeship Project · 2026",
-        footerText: "A personal project about career orientation and web development."
+        footerText: "A personal project about career orientation and web development.",
+        docsEyebrow: "INSIGHTS",
+        docsTitle: "Documentation & Development",
+        docsText: "Here I document my development process, project planning and use of AI throughout the project.",
+        docsJournal: "Development Journal",
+        docsJournalText: "My progress, experiences and lessons learned.",
+        docsAI: "AI Prompts & AI Usage",
+        docsAIText: "Examples of my prompts and how I use AI as a tool.",
+        docsRequirements: "Project Requirements",
+        docsRequirementsText: "Project goals, requirements and features.",
+        docsPlanning: "Project Planning",
+        docsPlanningText: "Planning and individual development phases.",
+        docsDesign: "Design Concept",
+        docsDesignText: "Website design, colours and layout.",
+        docsArchitecture: "Technical Architecture",
+        docsArchitectureText: "Project file structure and technical setup.",
+        docsOpen: "Open document →"
     }
 };
 
@@ -48,3 +80,8 @@ document.querySelectorAll("[data-i18n]").forEach(element => {
         element.innerHTML = translation;
     }
 });
+// Im de-Objekt:
+navDocs: "Dokumentation",
+
+// Im en-Objekt:
+navDocs: "Documentation",

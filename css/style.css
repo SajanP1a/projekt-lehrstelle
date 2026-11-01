@@ -386,3 +386,50 @@ body {
         font-size: 20px;
     }
 }
+
+.documentation-section {
+    padding: 80px 8%;
+}
+
+.documentation-intro {
+    max-width: 650px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.documentation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.documentation-card {
+    padding: 24px;
+    background: #10243D;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.documentation-card:hover {
+    transform: translateY(-4px);
+    border-color: #2463A5;
+}
+
+.documentation-card h3 {
+    margin-top: 0;
+}
+
+.documentation-card p {
+    line-height: 1.6;
+}
+
+.documentation-card a {
+    color: #70AFFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.documentation-card a:hover {
+    text-decoration: underline;
+}
