@@ -7,6 +7,8 @@
 **Entwickler:** Projektverantwortlicher  
 **Beginn der dokumentierten Entwicklung:** 31. Oktober 2026
 
+![mindmap](./Projekt_Lehrstelle_Mindmap.png)
+
 ### Ziel des Entwicklungsjournals
 
 In diesem Dokument halte ich die Entwicklung meines Projekts fest. Ich dokumentiere umgesetzte Funktionen, verwendete Technologien, Schwierigkeiten, Lösungsansätze und meine persönlichen Lernerfahrungen.
