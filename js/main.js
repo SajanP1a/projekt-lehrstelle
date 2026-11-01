@@ -2,8 +2,25 @@
 async function loadCompanies() {
     const companyList = document.getElementById("company-list");
 
+    // Gewählte Sprache aus der URL lesen
+    const params = new URLSearchParams(window.location.search);
+    const language = params.get("lang") === "en" ? "en" : "de";
+
+    // Texte für die Unternehmensübersicht
+    const texts = {
+        de: {
+            profile: "Profil ansehen →",
+            empty: "Noch keine Unternehmensprofile vorhanden.",
+            error: "Die Unternehmensprofile konnten nicht geladen werden."
+        },
+        en: {
+            profile: "View profile →",
+            empty: "No company profiles available yet.",
+            error: "The company profiles could not be loaded."
+        }
+    };
+
     try {
-        // Liste aller Unternehmen laden
         const indexResponse = await fetch("data/firmen/index.json");
 
         if (!indexResponse.ok) {
@@ -12,7 +29,6 @@ async function loadCompanies() {
 
         const companyIds = await indexResponse.json();
 
-        // Alle Unternehmensdateien laden
         const companies = await Promise.all(
             companyIds.map(async (id) => {
                 const response = await fetch(`data/firmen/${id}.json`);
@@ -25,10 +41,12 @@ async function loadCompanies() {
             })
         );
 
-        // Karten erstellen
         companyList.replaceChildren();
 
         companies.forEach(company => {
+            const languageData =
+                company.languages[language] || company.languages.de;
+
             const card = document.createElement("article");
             card.classList.add("company-card");
 
@@ -36,15 +54,20 @@ async function loadCompanies() {
             location.textContent = company.location;
 
             const title = document.createElement("h3");
-            title.textContent = company.languages.de.title;
+            title.textContent = languageData.title;
 
             const description = document.createElement("p");
-            description.textContent =
-                company.languages.de.chapters[0].content;
+
+            const firstChapter = languageData.chapters[0];
+            const content = firstChapter.content;
+
+            description.textContent = Array.isArray(content)
+                ? content.join(" ")
+                : content;
 
             const link = document.createElement("a");
-            link.textContent = "Profil ansehen →";
-            link.href = `profil.html?id=${encodeURIComponent(company.id)}&lang=de`;
+            link.textContent = texts[language].profile;
+            link.href = `profil.html?id=${encodeURIComponent(company.id)}&lang=${language}`;
             link.classList.add("company-link");
 
             card.append(location, title, description, link);
@@ -52,16 +75,14 @@ async function loadCompanies() {
         });
 
         if (companies.length === 0) {
-            companyList.textContent = "Noch keine Unternehmensprofile vorhanden.";
+            companyList.textContent = texts[language].empty;
         }
 
     } catch (error) {
         console.error("Fehler beim Laden:", error);
 
-        companyList.textContent =
-            "Die Unternehmensprofile konnten nicht geladen werden.";
+        companyList.textContent = texts[language].error;
     }
 }
 
 loadCompanies();
-
