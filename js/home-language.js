@@ -4,6 +4,7 @@ const translations = {
         navStart: "Start",
         navProject: "Über das Projekt",
         navCompanies: "Unternehmen",
+        navDocs: "Dokumentation",
         eyebrow: "MEIN PERSÖNLICHES PROJEKT",
         headline: 'Die Zukunft beginnt<br>mit <span>einer Entscheidung.</span>',
         heroText: "Ich untersuche Unternehmen, entdecke spannende Lehrstellen und dokumentiere meine Erkenntnisse in diesem digitalen Projekt.",
@@ -37,6 +38,7 @@ const translations = {
         navStart: "Home",
         navProject: "About the Project",
         navCompanies: "Companies",
+        navDocs: "Documentation",
         eyebrow: "MY PERSONAL PROJECT",
         headline: 'The future begins<br>with <span>a decision.</span>',
         heroText: "I research companies, discover interesting apprenticeships and document my findings in this digital project.",
@@ -80,8 +82,3 @@ document.querySelectorAll("[data-i18n]").forEach(element => {
         element.innerHTML = translation;
     }
 });
-// Im de-Objekt:
-navDocs: "Dokumentation",
-
-// Im en-Objekt:
-navDocs: "Documentation",
