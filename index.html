@@ -8,6 +8,7 @@
     <title>Projekt Lehrstelle</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/home-language.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -17,36 +18,43 @@
             <a href="index.html" class="logo">PROJEKT<span>LEHRSTELLE</span></a>
 
             <div class="nav-links">
-                <a href="#start">Start</a>
-                <a href="#projekt">Über das Projekt</a>
-                <a href="#unternehmen">Unternehmen</a>
+                <a href="#start" data-i18n="navStart">Start</a>
+                <a href="#projekt" data-i18n="navProject">Über das Projekt</a>
+                <a href="#unternehmen" data-i18n="navCompanies">Unternehmen</a>
+            </div>
+
+            <div class="language-switch">
+                <a href="?lang=de">DE</a>
+                <span>|</span>
+                <a href="?lang=en">EN</a>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="hero" id="start">
-            <p class="eyebrow">MEIN PERSÖNLICHES PROJEKT</p>
+            <p class="eyebrow" data-i18n="eyebrow">MEIN PERSÖNLICHES PROJEKT</p>
 
-            <h1>Die Zukunft beginnt<br>
+            <h1 data-i18n="headline">
+                Die Zukunft beginnt<br>
                 mit <span>einer Entscheidung.</span>
             </h1>
 
-            <p class="hero-text">
+            <p class="hero-text" data-i18n="heroText">
                 Ich untersuche Unternehmen, entdecke spannende Lehrstellen
                 und dokumentiere meine Erkenntnisse in diesem digitalen Projekt.
             </p>
 
-            <a href="#unternehmen" class="button">
+            <a href="#unternehmen" class="button" data-i18n="heroButton">
                 Unternehmen entdecken
             </a>
         </section>
 
         <section class="project-section" id="projekt">
-            <p class="eyebrow">DAS PROJEKT</p>
-            <h2>Mehr als eine Lehrstellensuche.</h2>
+            <p class="eyebrow" data-i18n="projectEyebrow">DAS PROJEKT</p>
+            <h2 data-i18n="projectTitle">Mehr als eine Lehrstellensuche.</h2>
 
-            <p>
+            <p data-i18n="projectText">
                 Dieses Projekt verbindet Berufsorientierung mit Webentwicklung.
                 Für jedes Unternehmen erstelle ich ein eigenes Profil und
                 untersuche die Ausbildung, das Arbeitsumfeld und besondere
@@ -55,18 +63,20 @@
         </section>
 
         <section class="companies-section" id="unternehmen">
-            <p class="eyebrow">ENTDECKEN</p>
-            <h2>Unternehmensprofile</h2>
+            <p class="eyebrow" data-i18n="companiesEyebrow">ENTDECKEN</p>
+            <h2 data-i18n="companiesTitle">Unternehmensprofile</h2>
 
             <div id="company-list" class="company-grid">
-                <!-- Unternehmensprofile werden später automatisch geladen. -->
+                <!-- Unternehmensprofile werden automatisch geladen. -->
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Projekt Lehrstelle · 2026</p>
-        <p>Ein persönliches Projekt zur Berufsorientierung und Webentwicklung.</p>
+        <p data-i18n="footerTitle">Projekt Lehrstelle · 2026</p>
+        <p data-i18n="footerText">
+            Ein persönliches Projekt zur Berufsorientierung und Webentwicklung.
+        </p>
     </footer>
 
 </body>
