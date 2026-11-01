@@ -175,3 +175,33 @@ Für jeden weiteren Entwicklungsschritt wird ein neuer Eintrag ergänzt.
 
 **Nächste Schritte:**
 - 
+## Entwicklungsfortschritt – Zweisprachigkeit und Veröffentlichung
+
+### 1. Unternehmensprofile dynamisch laden
+Ich habe die Unternehmensprofile so aufgebaut, dass sie über eine zentrale JSON-Datei (`data/firmen/index.json`) gefunden und dynamisch geladen werden. Dadurch können später weitere Unternehmen ergänzt werden, ohne die gesamte Website neu programmieren zu müssen.
+
+### 2. Zweisprachige Unternehmensprofile
+Ich habe die Unternehmensdaten auf Deutsch und Englisch in JSON gespeichert. Die Profilseite liest die gewünschte Sprache aus der URL aus. Dadurch kann dasselbe Profil in zwei Sprachen angezeigt werden.
+
+### 3. Veröffentlichung mit GitHub Pages
+Ich habe das Projekt über GitHub Pages veröffentlicht. Anschliessend habe ich die Website auf einem Mobiltelefon getestet und überprüft, ob die wichtigsten Funktionen online funktionieren.
+
+### 4. Zweisprachige Startseite
+Ich habe die Startseite ebenfalls auf Deutsch und Englisch erweitert. Dafür habe ich eine neue JavaScript-Datei (`js/home-language.js`) erstellt, welche die passenden Texte anhand des URL-Parameters `lang` einsetzt.
+
+### 5. Sprachabhängige Unternehmensübersicht
+Ich habe `js/main.js` angepasst. Die Unternehmensübersicht verwendet jetzt die passende Sprachversion der Firmendaten. Auch die Links zu den Unternehmensprofilen übernehmen die ausgewählte Sprache.
+
+### 6. Testen und Fehlerbehebung
+Ich habe die deutsche und englische Startseite sowie die Unternehmensprofile getestet. Dabei habe ich kontrolliert, ob die Texte, Unternehmensinformationen und Sprachwechsel korrekt funktionieren.
+
+### 7. GitHub und Versionsverwaltung
+Nach den Änderungen habe ich die Dateien mit Git gespeichert und zu GitHub hochgeladen. So bleibt der aktuelle Entwicklungsstand online und die Änderungen sind nachvollziehbar.
+
+### Was ich dabei gelernt habe
+- JSON-Daten können für mehrere Sprachversionen verwendet werden.
+- JavaScript kann die Sprache anhand von URL-Parametern erkennen.
+- Mit `URLSearchParams` lassen sich Parameter aus einer URL auslesen.
+- Mit `fetch()` können JSON-Dateien dynamisch geladen werden.
+- Git und GitHub helfen dabei, Änderungen zu speichern und zu veröffentlichen.
+- Eine Website muss nicht nur lokal, sondern auch online und auf mobilen Geräten getestet werden.
